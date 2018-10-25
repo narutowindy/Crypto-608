@@ -1,15 +1,17 @@
+#!/bin/env python
+
 def pow_modm(x,e,m):
-    X = x
-    E = e
-    Y = 1
-    while E > 0:
-        if E % 2 == 0:
-            X = (X * X) % m
-            E = E/2
+    base = x
+    expo = e
+    i = 1
+    while i > 0:
+        if i % 2 == 0:
+            base = (base * base) % m
+            expo = expo/2
         else:
-            Y = (X * Y) % m
-            E = E - 1
-    return Y
+            i = (base * i) % m
+            expo = expo - 1
+    return i
 
 print("Square and multiply alogorithm \t\n")
 
