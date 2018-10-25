@@ -1,3 +1,5 @@
+
+#!/bin/env python
 # p-1  factors q1,q2,q3.....qm
 #   g = generator =    1 <g< p-1
 #   g = 2
