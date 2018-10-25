@@ -36,11 +36,13 @@ then verified :
 """
 
 
+print("Use ./Generator.py to find g ")
+print("use ./PrimeFact.py to find primefactors in genator func")
 
 p = int(input("Enter prime p "))
 g  = int((input("Enter a generator g ")))
 
-r = int(input("ENter a rand.secrt.key for Gen sign r "))
+r = int(input("ENter a rand.secrt.key for Gen sign 1 < r< p-1 "))
 
 K = pow(g,r,p)
 
@@ -49,6 +51,7 @@ print("A----->publishes ( K,p,g )---",K ,p,g)
 M = int(input("Enter a msg in numeric rep"))
 
 print("\nSelect a random R such that gcd(R,p-1) = 1\n")
+print("Use script ./gcd_1.py to find R ")
 """
 for i in range(2,p):
     if(math.gcd(i,p-1)==1):

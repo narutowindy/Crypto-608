@@ -1,4 +1,4 @@
-
+#!/bin/python2
 # Python program to print prime factors 
   
 import math 
@@ -27,5 +27,5 @@ def primeFactors(n):
         print n 
 
 
-pf = int(input("Enter a number \t "))
+pf = int(input("Enter a number ( P-1) \t "))
 primeFactors(pf)
