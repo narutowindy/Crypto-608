@@ -18,3 +18,4 @@ p = int(input("Enter power value p:\t"))
 m = int(input("Enter mod value m:\t"))
 
 print(pow_modm(b,p,m))
+
