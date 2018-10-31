@@ -15,6 +15,4 @@ def modinv(a, m):
 print("Multiplicative modulo inverse \n")
 g = int(input("Enter a numner g\t"))
 m = int(input("Enter a mod\t"))
-
 print(modinv(g,m))
-
