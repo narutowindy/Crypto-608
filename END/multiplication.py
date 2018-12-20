@@ -2,12 +2,12 @@
 import gmpy2
 
 def m(a):
-      return pow(a,1,3571);
+      return pow(a,1,p);
 
 
 def Addition(xp,yp,xq,yq):
     an = (yq-yp)
-    ad = gmpy2.invert(xq-xp,3571);
+    ad = gmpy2.invert(xq-xp,p);
 
     alpha = m( an * ad)
     beta = m( yp - (alpha * xp));
@@ -43,5 +43,5 @@ def multiplication(xq,yq):
 
 gx= int(input("ENter a  point x : "))
 gy= int(input("ENter a  point y : "))
-
+p = int(input("Enter a PRime p : "))
 multiplication(gx,gy);
