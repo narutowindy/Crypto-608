@@ -220,33 +220,33 @@ if __name__ == "__main__":
     print(g);
 
 
-    #nA = int(input("Enter priv key of A < Prime nA:"))
-    #nB = int(input("Enter priv key of A < Prime nB:"))
-    nA = 26
-    nB = 28
+    nA = int(input("Enter priv/ secret key of A < Prime nA:"))
+    nB = int(input("Enter priv/ secret key of A < Prime nB:"))
+    #nA = 26
+    #nB = 28
 
     pA  =  ec.mul(g,nA)
     pB  =  ec.mul(g,nB)
 
-    print("Public keys of A  is : ",pA)
-    print("Public keys of B is : ",pB)
+    print("Public keys of A  is pA : ",pA)
+    print("Public keys of B is pB : ",pB)
 
-    msg1 = int(input("Enter msg first part < prime: msg1 :"))
-    msg2 = int(input("Enter msg second part < prime: msg2 :"))
+    msg1 = int(input("Enter msg first part < prime: m1 :"))
+    msg2 = int(input("Enter msg second part < prime: m2 :"))
     
     key  = int (input("A selects a priv key k: "))
     y0 = ec.mul(g,key);
-    print(y0)
+    print("y0 = ",y0)
 
 
     c = ec.mul(pB,key)
-    print("print C1 and c2 :",c )
+    print("mask (C1, c2) : ",c )
 
     y1 = c[0] * msg1 % P
     y2 = c[1] * msg2 % P
 
 
-    print("A sends y0,y1,y2 via open channel: ",y0,y1,y2)
+    print("A sends y0 , y1 , y2 via open channel: ",y0,y1,y2)
 
 
     print("=================Decrypt=====")
